@@ -1,12 +1,84 @@
 * {
     padding: 0%;
     margin: 0%;
+    font-family: $defaultFont;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+
+    h1,
+    p,
+    i {
+        color: $defaultWhite;
+    }
+}
+
+
+main {
+    @include flexBoxDefault(column, center, center, 3vh);
+
+    >section {
+        @include flexBoxDefault(column);
+        padding: 10% 5%;
+
+        >article:first-child {
+            @include flexBoxDefault(column, center, center, 3vh);
+
+            >p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    color: $defaultGreen;
+    text-transform: capitalize;
+}
+
+h3,
+h4 {
+    width: 100%;
+}
+
+p {
+    line-height: 3.5vh;
+}
+
+a {
+    text-decoration: none;
+    color: $defaultBlack;
 }
 
 figure {
-    width: 20%;
+    width: 100%;
 }
 
 img {
     width: 100%;
+}
+
+form {
+    @include flexBoxDefault(column, center, flex-end, 3vh);
+    width: 100%;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $defaultBlack;
+    padding: 2%;
+}
+
+[type="submit"] {
+    width: 30%;
+    color: $defaultWhite;
+    background-color: $defaultGreen;
 }
