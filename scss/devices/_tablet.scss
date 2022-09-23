@@ -4,28 +4,43 @@
     }
 
     header {
-        @include flexBoxDefault(row, center, center, 0vh, 0vh);
+        @include flexBoxDefault(row, inherit, inherit, 0vh, 0vh);
+        height: 40vh;
 
-    }
-
-    nav {
-
-
-        aside:first-child {
-            display: none;
-        }
-
-        aside:last-child {
-            display: flex;
-            position: relative;
+        article {
+            width: 40%;
+            height: 100%
         }
 
         ul {
-            background-color: $defaultGreen;
-            width: 10vh;
-            height: 10vh;
+            @include flexBoxDefault(row, center, flex-end, 0vh, 1vh);
+            width: 60%;
+            height: 100%;
+            padding: 5%;
+        }
+
+        li {
+            @include flexBox(row);
+            width: 100%;
+        }
+
+        a {
+            text-transform: capitalize;
+            color: $defaultWhite;
+            width: 100%;
         }
     }
+
+    nav {
+        display: none;
+
+        button {
+            display: none;
+        }
+
+    }
+
+
 
     .about {
         >aside {
@@ -38,6 +53,12 @@
 
         img {
             width: 20%;
+        }
+
+        figcaption {
+            aside {
+                @include flexBoxDefault(row, left, center, 1vh, 1vh);
+            }
         }
     }
 
@@ -93,6 +114,11 @@
                 width: 50%;
                 padding: 5%;
             }
+        }
+
+        aside {
+            width: 100%;
+            @include flexBoxDefault(column, center, flex-start, 2vh);
         }
     }
 

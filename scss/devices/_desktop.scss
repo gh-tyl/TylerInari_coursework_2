@@ -1,0 +1,99 @@
+@media (min-width: 1000px) {
+    main {
+        >section {
+            padding: 5% 5%;
+        }
+    }
+
+    p {
+        line-height: 5vh;
+    }
+
+    header {
+        height: 60vh;
+
+        a:hover {
+            color: $defaultGreen;
+        }
+    }
+
+    .about {
+        aside {
+            @include flexBoxDefault(row, space-around, center, 1vh, 1vh);
+            flex-wrap: wrap;
+        }
+
+        figure {
+            width: 45%;
+            align-items: flex-start;
+        }
+
+        img {
+            width: 45%;
+        }
+
+        figcaption {
+            width: 60%;
+            padding-top: 0%;
+
+            h3 {
+                font-size: 18px;
+            }
+
+            h4 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 10px;
+                line-height: 2vh;
+            }
+
+            aside {
+                @include flexBoxDefault(row, left, center, 1vh, 1vh);
+            }
+        }
+
+    }
+
+    .features {
+        >section {
+            @include flexBoxDefault(row, center, center, 0vh, 2vh);
+        }
+
+        >article:last-child {
+
+            figure {
+                @include flexBoxDefault(row, center, center, 0vh, 2vh);
+
+                img {
+                    width: 50%;
+                }
+
+                figcaption {
+                    width: 50%;
+                }
+
+            }
+
+        }
+
+        p {
+            line-height: 3vh;
+        }
+    }
+
+    .gallery {
+        p {
+            line-height: 3vh;
+        }
+    }
+
+    .contact {
+        p {
+            line-height: 3vh;
+        }
+    }
+
+
+}
