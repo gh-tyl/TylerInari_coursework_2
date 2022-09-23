@@ -12,6 +12,10 @@
         i {
             font-size: 48px;
         }
+
+        >ul {
+            display: none;
+        }
     }
 
     nav {
@@ -37,7 +41,7 @@
         aside:last-child {
             width: 100%;
             position: absolute;
-            top: 5vh;
+            top: 8vh;
         }
 
         ul {
@@ -66,7 +70,11 @@
 
     .about {
         >aside {
-            @include flexBoxDefault(column, center, center, 5vh)
+            @include flexBoxDefault(column, center, center, 5vh);
+        }
+
+        figure {
+            width: 100%;
         }
 
         figcaption {
@@ -203,6 +211,8 @@
         padding: 10%;
 
         span {
+            width: 100%;
+            text-align: left;
             color: $defaultGreen;
             font-size: 20px;
         }
