@@ -1,0 +1,295 @@
+@media (min-width: 200px) {
+    header {
+        @include bgPic("/img/header.jpg", inherit, 70vh);
+
+        article {
+            @include flexBoxDefault(column, flex-end, flex-start, 1vh);
+            width: 70%;
+            height: 90%;
+            padding: 5%;
+        }
+
+        i {
+            font-size: 48px;
+        }
+    }
+
+    nav {
+        @include flexBoxDefault(column, center, flex-end);
+
+        aside:first-child {
+            @include flexBoxDefault(row, right, center);
+            width: 100%;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            width: fit-content;
+            padding: 3%;
+        }
+
+        span {
+            color: whitesmoke;
+            font-size: 24px;
+        }
+
+        aside:last-child {
+            width: 100%;
+            position: absolute;
+            top: 5vh;
+        }
+
+        ul {
+            @include flexBox(column);
+            width: 100%;
+        }
+
+        li {
+            @include flexBox(column);
+            width: 100%;
+        }
+
+        a {
+            width: 100%;
+            padding: 3%;
+            text-align: right;
+            text-transform: capitalize;
+            color: whitesmoke;
+            border-bottom: 1px solid whitesmoke;
+        }
+
+        a:hover {
+            color: whitesmoke;
+        }
+    }
+
+    .about {
+        >aside {
+            @include flexBoxDefault(column, center, center, 5vh)
+        }
+
+        figcaption {
+            @include flexBoxDefault(column, center, center, 1vh);
+            padding: 5%;
+
+            h3 {
+                color: $defaultBlue;
+                font-size: 24px;
+            }
+
+            h4 {
+                color: $defaultPink;
+                font-size: 18px;
+            }
+
+            a {
+                font-size: 18px;
+                padding: 2%;
+            }
+
+            aside {
+                @include flexBoxDefault(row, left, center, 0vh, 5vh);
+                width: 100%;
+            }
+        }
+    }
+
+
+    .features {
+        row-gap: 8vh;
+
+        aside {
+            @include flexBoxDefault(column, center, center, 3vh);
+            padding-top: 5%;
+            padding-bottom: 5%;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        i {
+            font-size: 68px;
+            color: $defaultBlack;
+            padding: 10%;
+        }
+
+        aside {
+            a {
+                background-color: $defaultBlue;
+                color: $defaultWhite;
+                padding: 3%;
+            }
+        }
+
+        aside:nth-child(2) {
+            a {
+                background-color: $defaultGreen;
+            }
+        }
+
+        aside:nth-child(3) {
+            a {
+                background-color: $defaultRed;
+            }
+
+        }
+
+        figcaption {
+            @include flexBoxDefault(column, center, center, 3vh);
+
+            a {
+                color: $defaultBlue;
+                text-decoration: underline;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        h3 {
+            color: $defaultBlue;
+            font-size: 20px
+        }
+
+    }
+
+    .menu {
+        @include flexBoxDefault(column, center, center, 3vh);
+
+        h4 {
+            color: $defaultBlue;
+        }
+
+        >aside {
+            @include flexBoxDefault(row, space-around, center, 1vh, 1vh);
+            flex-wrap: wrap;
+            width: 60%;
+
+            a {
+                padding: 3% 8%;
+                color: $defaultGreen;
+                border: 1px solid $defaultGreen;
+            }
+        }
+
+        figure:last-child {
+            @include flexBoxDefault(column, center, center, 3vh);
+
+            p {
+                text-align: justify;
+
+                a {
+                    color: $defaultBlue;
+                    text-decoration: underline;
+                }
+            }
+
+            figcaption {
+                @include flexBoxDefault(column, center, flex-end, 3vh);
+
+                >a {
+                    padding: 3% 8%;
+                    color: $defaultBlack;
+                    border: 1px solid $defaultBlack;
+                }
+            }
+        }
+    }
+
+    .gallery {
+        padding: 10%;
+
+        span {
+            color: $defaultGreen;
+            font-size: 20px;
+        }
+
+        p {
+            text-align: none;
+        }
+
+        >figure {
+            @include flexBoxDefault(column, center, center, 5vh);
+        }
+
+        figcaption {
+            @include flexBoxDefault(column, center, flex-end, 3vh);
+
+            >a {
+                border: 1px solid $defaultBlack;
+                padding: 3%;
+            }
+        }
+    }
+
+    .contact {
+        @include flexBoxDefault(column, center, center, 3vh);
+
+        p {
+            a {
+                color: $defaultBlue;
+                text-decoration: underline;
+            }
+        }
+
+        h3 {
+            color: $defaultGreen;
+            text-transform: capitalize;
+        }
+
+        i {
+            color: $defaultGreen;
+        }
+
+
+        >section {
+            @include flexBoxDefault(column, center, center, 5vh);
+
+            article {
+                @include flexBoxDefault(column, center, center, 3vh);
+            }
+        }
+
+        aside {
+            width: 100%;
+            @include flexBoxDefault(row, space-between);
+        }
+
+        aside:last-child {
+            @include flexBoxDefault(row, left);
+
+            a {
+                padding: 3%;
+            }
+        }
+    }
+
+    textarea {
+        height: 20vh;
+    }
+
+    .faq {
+        @include flexBoxDefault(column, center, center, 3vh);
+    }
+
+    .accordion {
+        @include flexBoxDefault(column, center, center, 5vh);
+        width: 100%;
+    }
+
+    .accordion-item {
+        width: 100%;
+
+        aside {
+
+            border: 1px solid $defaultBlack;
+        }
+    }
+
+    footer {
+        text-align: center;
+    }
+}
