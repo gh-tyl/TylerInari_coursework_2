@@ -9,7 +9,7 @@
     justify-content: $justifyContent;
     align-items: $alignItems;
     row-gap: $rowGap;
-    columns: $columnGap;
+    column-gap: $columnGap;
 }
 
 @mixin bgPic($url,
